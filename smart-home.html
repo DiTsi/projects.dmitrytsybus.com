@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<head>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-71G6LJV8B3"></script>
+    <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'G-71G6LJV8B3');
+    </script>
+    <meta charset="utf-8" />
+    <!-- Set the viewport width to device width for mobile -->
+    <meta name="viewport" content="width=device-width" />
+
+    <title>Smart Home</title>
+
+    <link rel="stylesheet" href="https://project.ditsi.ru/theme/css/normalize.css" />
+    <link rel="stylesheet" href="https://project.ditsi.ru/theme/css/foundation.min.css" />
+    <link rel="stylesheet" href="https://project.ditsi.ru/theme/css/style.css" />
+    <link rel="stylesheet" href="https://project.ditsi.ru/theme/css/pygments.css" />
+    <link rel="stylesheet" href="https://project.ditsi.ru/theme/css/custom.css" />	
+    <script src="https://project.ditsi.ru/theme/js/modernizr.js"></script>
+</head>
+
+<body>
+
+<!-- Nav Bar -->
+<nav>
+<div class="top-bar">
+<div class="row">
+    <div class="large-9 large-centered columns">
+	    <h1><a href="https://project.ditsi.ru">Dmitry Tsybus | Projects</a></h1>
+    </div>
+</div>
+</div>
+
+<!-- Show menu items and pages -->
+<div class="row">
+<div class="large-9 columns">
+    <ul class="button-group navigation">
+
+    </ul>
+</div>
+</div>
+</nav>
+<!-- End Nav -->
+
+
+<!-- Main Page Content and Sidebar -->
+<div class="row">
+
+    <!-- Main Blog Content -->
+    <div class="large-9 columns">
+<article>
+    <header>
+        <h3 class="article-title"><a href="https://project.ditsi.ru/smart-home.html" rel="bookmark"
+        title="Permalink to Smart Home">Smart Home</a></h3>
+    </header>
+
+<h6 class="subheader" title="2018-01-13T00:00:00+03:00">Sat 13 January 2018
+</h6>
+
+
+    <p>Проект умного дома начинался 5 лет назад и сейчас, кажется, что он созрел достаточно, чтобы о нём можно было написать.</p>
+<p>Цели на тот момент были туманными, но было однозначно ясно, что на этапе строительства необходимо предусмотреть расположение всего, что сдвинуть с места уже не получится: провода питания, котёл, трубы отопления с возможностью вРАЗУМить это всё в будущем.</p>
+<p>Исходя из этого трубы отопления разводились с использованием коллекторов - для индивидуального отопления каждой комнаты.</p>
+<p><img alt="None" src="https://project.ditsi.ru/images/11/1.jpeg"></p>
+<p>Свет было принято делать не по классической схеме с прокладыванием высоковольтного провода через выключатели, а вести из единой точки управления индивидуальные провода в каждую комнату, чтобы в будущем управлять через контроллеры. Какие - на тот момент я даже не думал.</p>
+<p>Все коммуникации должны были сходиться в одном месте - у сервера.</p>
+<p>Смешно вспоминать, но на тот момент я даже обдумывал вариант разработки собственной реализации приложения умного дома. Это, конечно, утопия. Хорошо, что с того момента я порядком прокачался в IT, чтобы счесть эту идею нереальной.</p>
+<p>Подробно описывать всё что было сделано не имеет смысла и займёт очень много времени-пространства в этом посте. Перейду к тому, что получилось на текущий момент.</p>
+<h1>Освещение</h1>
+<p>В качестве протокола для освещения был выбран DMX512: старый, надёжный, неприхотливый. Всякую современную "умную" беспроводную дребедень я не рассматривал.</p>
+<p><img alt="None" src="https://project.ditsi.ru/images/11/2.jpeg"></p>
+<p>До сервера тянется один провод через DMX512 -&gt; USB адаптер.</p>
+<p><img alt="None" src="https://project.ditsi.ru/images/11/3.jpeg"></p>
+<p>Контроллеры умеют менять яркость, включать и выключать. Они умеют ещё больше, но не буду погружаться в технические подробности.</p>
+<p>Включать-выключать свет будет не нужно, это будет делать автоматика при входе-выходе в дом и из комнаты в комнату. Это отдельный проект (как сказали бы в СССР, "программно-аппаратный комплекс"), который будет легко интегрирован в Home Assistant. В HomeKit и Google Home тоже, когда придёт время ;-) Тут я бы мог растечься по древу совсем жидко, но держу себя в рамках приличия.</p>
+<h1>Отопление</h1>
+<p>Для отопления был выбран котёл Vaillant с интефейсом EBUS. Для подключения этого интерфейса к серверу через COM порт в немецкой компании купил адаптер. Операция по доставке устройства была серьёзная, так как магазин доставлял свои товары куда угодно кроме России (задолго до того, как это стало мейнстримом). Поэтому к процессу подключились мои западные партнёры в Бельгии и путь адаптера был несколько длиннее. До сих пор, к сожалению, не добрался до усправления непосредственно котлом, поэтому оставляю свободным пространство.</p>
+<p>...</p>
+<p>Добрались до современной "умной" дребедени. Сейчас котёл приходится включать и выключать для поддержания нужной температуры. Временной лаг достаточно большой чтобы не переживать по поводу частых включений, а для самого включения используются умные розетки. Работают по протоколу Zigbee. WiFi я изначально считал слишком тяжёлым для этой задачи + хотелось, чтобы его наличие / отсутствие никак не влияло на Умный дом. </p>
+<h1>Приложение</h1>
+<p>В качестве умного дома был выбран быстро взлетевший в топ <a href="https://www.home-assistant.io/">Home Assistant</a>: современное решение на современных технологиях: python, jinja2, yaml. Всё удобно и понятно для IT'шников. К сожалению ребята не допилили (и, похоже, не собираются) развёртывание Home Assistant целиком через код, но всё, что мог на этом пути, я сделал. В основном там <a href="https://ru.wikipedia.org/wiki/%D0%98%D0%BD%D1%84%D1%80%D0%B0%D1%81%D1%82%D1%80%D1%83%D0%BA%D1%82%D1%83%D1%80%D0%B0_%D0%BA%D0%B0%D0%BA_%D0%BA%D0%BE%D0%B4">IaC</a>, но какие-то ручные действия совершать придётся.</p>
+<h1>Что получилось</h1>
+<p>На данный момент приложение выглядит так.</p>
+<p>Это вкладка с управлением освещением</p>
+<p><img alt="None" src="https://project.ditsi.ru/images/11/4.jpeg"></p>
+<p>дто данные по геолокации членов семьи, которые используются для автоматизации</p>
+<p><img alt="None" src="https://project.ditsi.ru/images/11/5.jpeg"></p>
+<p>контроль за безопасностью (WiFi отнёс сюда же)</p>
+<p><img alt="None" src="https://project.ditsi.ru/images/11/6.jpeg"></p>
+<p>управление климатом</p>
+<p><img alt="None" src="https://project.ditsi.ru/images/11/7.jpeg"></p>
+<p>и минимальное количество настроек</p>
+<p><img alt="None" src="https://project.ditsi.ru/images/11/8.jpeg"></p>
+<p>Всё остальное я выбросил в лучших традициях Apple. Кроме кнопок управления светом есть только одна - это "подготовка дома". Когда мы уезжаем из дома на некоторое время, он переходит в режим поддержания тепла (standby), в котором он греется не так сильно. А чтобы прогреть его заранее перед возвращением и нужна кнопка "подготовка дома".</p>
+<p>Что касается автоматизации - я сделал всё, на что сейчас хватает датчиков, умных устройств и фантазии. Дом умеет:</p>
+<ul>
+<li>
+<p>включать для вас свет в прихожей, когда вы возвращаетесь из магазина</p>
+</li>
+<li>
+<p>выключать свет везде, когда вы уходите из дома</p>
+</li>
+<li>
+<p>включать / отключать защиту</p>
+</li>
+<li>
+<p>включает / выключает WiFi</p>
+</li>
+<li>
+<p>поддерживает заданные температуры для двух режимов: когда кто  -то есть в доме и когда никого нет</p>
+</li>
+<li>
+<p>записывает всё, что в нём происходит, когда никого нет, и даёт знать об этом в ту же секунду</p>
+</li>
+<li>
+<p>знает всё об электричестве и сообщает, если напряжение слишком высокое / низкое или если питание в доме пропадает.</p>
+</li>
+</ul>
+<p>Есть ещё фишки по защите дома от взлома, о подробностях которых я умолчу здесь, но недоброжелатели, проникнув в дом, будут под впечатлением! А потом за решёткой.</p>
+<h1>Завершение</h1>
+<p>Есть ещё много всего, что хотелось бы реализовать, и этот пост будет дополняться по мере развития Умного дома, но то, что получилось сейчас мне уже нравится =)</p>
+<p>Далі буде...</p>
+<!-- <p class="subheader">Category: <a href="https://project.ditsi.ru/category/misc.html">misc</a> -->
+
+</p>
+
+
+
+
+</article>
+    </div>
+    <!-- End Main Content -->
+
+    <!-- Sidebar -->
+    <aside class="large-3 columns">
+        <!-- 		
+        <h5 class="sidebar-title">Categories</h5>
+        <ul class="side-nav">
+            <li><a href="https://project.ditsi.ru/category/misc.html">misc</a></li>
+   
+        </ul>
+ -->
+
+		
+        <h5 class="sidebar-title">Contact me</h5>
+        <ul class="side-nav">
+            <li><a href="https://t.me/DiTsi">Telegram</a></li>
+            <li><a href="https://github.com/DiTsi">GitHub</a></li>
+        </ul>
+
+<h5 class="sidebar-title">Navigation</h5>
+        <ul class="side-nav">
+            <li><a href="https://project.ditsi.ru/archives.html">List</a>
+            <!-- <li><a href="https://project.ditsi.ru/tags.html">Tags</a> -->
+        </ul>
+    </aside> <!-- End Sidebar -->
+
+</div> <!-- End Main Content and Sidebar -->
+
+
+<!-- Footer -->
+<footer class="row">
+    <div class="large-12 columns">
+        <hr />
+        <div class="row">
+            <div class="large-6 columns">
+              <!--                  <p>Dmitry Tsybus | Projects by Dmitry Tsybus</p> -->
+            </div>
+            </div>
+    </div>
+</footer>
+</body>
+</html>

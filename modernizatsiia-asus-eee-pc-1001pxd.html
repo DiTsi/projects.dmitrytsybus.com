@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<head>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-71G6LJV8B3"></script>
+    <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'G-71G6LJV8B3');
+    </script>
+    <meta charset="utf-8" />
+    <!-- Set the viewport width to device width for mobile -->
+    <meta name="viewport" content="width=device-width" />
+
+    <title>Модернизация Asus Eee PC 1001PXD</title>
+
+    <link rel="stylesheet" href="https://project.ditsi.ru/theme/css/normalize.css" />
+    <link rel="stylesheet" href="https://project.ditsi.ru/theme/css/foundation.min.css" />
+    <link rel="stylesheet" href="https://project.ditsi.ru/theme/css/style.css" />
+    <link rel="stylesheet" href="https://project.ditsi.ru/theme/css/pygments.css" />
+    <link rel="stylesheet" href="https://project.ditsi.ru/theme/css/custom.css" />	
+    <script src="https://project.ditsi.ru/theme/js/modernizr.js"></script>
+</head>
+
+<body>
+
+<!-- Nav Bar -->
+<nav>
+<div class="top-bar">
+<div class="row">
+    <div class="large-9 large-centered columns">
+	    <h1><a href="https://project.ditsi.ru">Dmitry Tsybus | Projects</a></h1>
+    </div>
+</div>
+</div>
+
+<!-- Show menu items and pages -->
+<div class="row">
+<div class="large-9 columns">
+    <ul class="button-group navigation">
+
+    </ul>
+</div>
+</div>
+</nav>
+<!-- End Nav -->
+
+
+<!-- Main Page Content and Sidebar -->
+<div class="row">
+
+    <!-- Main Blog Content -->
+    <div class="large-9 columns">
+<article>
+    <header>
+        <h3 class="article-title"><a href="https://project.ditsi.ru/modernizatsiia-asus-eee-pc-1001pxd.html" rel="bookmark"
+        title="Permalink to Модернизация Asus Eee PC 1001PXD">Модернизация Asus Eee PC 1001PXD</a></h3>
+    </header>
+
+<h6 class="subheader" title="2011-08-14T00:00:00+04:00">Sun 14 August 2011
+</h6>
+
+
+    <p><img alt="None" src="https://project.ditsi.ru/images/34/4.JPG"></p>
+<p>Здравствуйте!!</p>
+<p>Все началось с моего вопроса (была ссылка) и ответа самому же себе. По ссылке решение выглядит довольно нечитабельно, потому я решил описать проделанную работу более подробно и с картинками.</p>
+<p>Захотелось добавить в свой Asus 1001PXD bluetooth и освободить 1 из двух usb портов, который вечно занят приемо-передатчиком мыши...</p>
+<p>Подобных статей в интернете по моему нетбуку не оказалось (или я так искал?).</p>
+<p>Не нашел фотографий внутренностей моего Asus'a до изменений (в том числе и в интернете), поэтому придется фантазировать, "вычитая" из этих фотографий две маленьких платы в правом нижнем углу: usb hub и bluetooth.</p>
+<p>Как оказалось, в данном нетбуке достаточно много места оставили Asus для ваших экспериментов и один нераспаянный usb на материнской плате. Так как одного мне было мало, решил использовать usb hub, из которого для уменьшения размера были выпаяны все usb порты, кроме одного - для мыши.</p>
+<p>Куда припаиваться:</p>
+<p><img alt="None" src="https://project.ditsi.ru/images/34/1.png"></p>
+<div class="highlight"><pre><span></span><code><span class="mf">1.</span><span class="w"> </span><span class="n">GND</span>
+<span class="mf">2.</span><span class="w"> </span><span class="o">+</span><span class="mf">3.3</span><span class="n">V</span>
+<span class="mf">3.</span><span class="w"> </span><span class="n">не</span><span class="w"> </span><span class="n">использую</span>
+<span class="mf">4.</span><span class="w"> </span><span class="err">?</span>
+<span class="mf">5.</span><span class="w"> </span><span class="err">?</span>
+<span class="mf">6.</span><span class="w"> </span><span class="n">GND</span>
+<span class="mf">7.</span><span class="w"> </span><span class="n">D</span><span class="o">+</span>
+<span class="mf">8.</span><span class="w"> </span><span class="n">D</span><span class="o">-</span>
+<span class="mf">9.</span><span class="w"> </span><span class="err">?</span>
+<span class="mf">10.</span><span class="w"> </span><span class="o">+</span><span class="mf">5</span><span class="n">V</span>
+</code></pre></div>
+
+<p>Питание и земля были найдены с помощью прибора, а D+, D- отчасти брались наугад (вообще в usb ножки расположены в таком порядке +5V, D-, D+, GND. В данном случае расположение подобное).</p>
+<p>Под рукой был bluetooth из ноутбука, его и использовал. Так как питание у него 3.3V, а не 5V как у usb устройств, то специально для него тянул с материнской платы со 2 ножки (на рисунке) провод.</p>
+<p>Обе платы посадил на двусторонний скотч (толщиной около 1мм).</p>
+<p>Получилось так:</p>
+<p><img alt="None" src="https://project.ditsi.ru/images/34/2.JPG"></p>
+<p><img alt="None" src="https://project.ditsi.ru/images/34/3.JPG"></p>
+<p>При попытке собрать обратно обнаружилась проблема: провода мешали поставить верхнюю панель.</p>
+<p>Сделал из них шлейф и ноутбук "собрался" обратно!</p>
+<p><img alt="None" src="https://project.ditsi.ru/images/34/4.JPG"></p>
+<p><img alt="None" src="https://project.ditsi.ru/images/34/5.JPG"></p>
+<p>Таким образом у меня теперь есть bluetooth, всегда подключенная мышка и 2 свободных usb порта (не считая еще 2-х usb на hub'e =)</p>
+<p>На этом всё! Буду рад комментариям и вопросам (^_^)'</p>
+<!-- <p class="subheader">Category: <a href="https://project.ditsi.ru/category/misc.html">misc</a> -->
+
+</p>
+
+
+
+
+</article>
+    </div>
+    <!-- End Main Content -->
+
+    <!-- Sidebar -->
+    <aside class="large-3 columns">
+        <!-- 		
+        <h5 class="sidebar-title">Categories</h5>
+        <ul class="side-nav">
+            <li><a href="https://project.ditsi.ru/category/misc.html">misc</a></li>
+   
+        </ul>
+ -->
+
+		
+        <h5 class="sidebar-title">Contact me</h5>
+        <ul class="side-nav">
+            <li><a href="https://t.me/DiTsi">Telegram</a></li>
+            <li><a href="https://github.com/DiTsi">GitHub</a></li>
+        </ul>
+
+<h5 class="sidebar-title">Navigation</h5>
+        <ul class="side-nav">
+            <li><a href="https://project.ditsi.ru/archives.html">List</a>
+            <!-- <li><a href="https://project.ditsi.ru/tags.html">Tags</a> -->
+        </ul>
+    </aside> <!-- End Sidebar -->
+
+</div> <!-- End Main Content and Sidebar -->
+
+
+<!-- Footer -->
+<footer class="row">
+    <div class="large-12 columns">
+        <hr />
+        <div class="row">
+            <div class="large-6 columns">
+              <!--                  <p>Dmitry Tsybus | Projects by Dmitry Tsybus</p> -->
+            </div>
+            </div>
+    </div>
+</footer>
+</body>
+</html>

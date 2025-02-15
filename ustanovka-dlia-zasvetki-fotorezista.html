@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<head>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-71G6LJV8B3"></script>
+    <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'G-71G6LJV8B3');
+    </script>
+    <meta charset="utf-8" />
+    <!-- Set the viewport width to device width for mobile -->
+    <meta name="viewport" content="width=device-width" />
+
+    <title>Установка для засветки фоторезиста</title>
+
+    <link rel="stylesheet" href="https://project.ditsi.ru/theme/css/normalize.css" />
+    <link rel="stylesheet" href="https://project.ditsi.ru/theme/css/foundation.min.css" />
+    <link rel="stylesheet" href="https://project.ditsi.ru/theme/css/style.css" />
+    <link rel="stylesheet" href="https://project.ditsi.ru/theme/css/pygments.css" />
+    <link rel="stylesheet" href="https://project.ditsi.ru/theme/css/custom.css" />	
+    <script src="https://project.ditsi.ru/theme/js/modernizr.js"></script>
+</head>
+
+<body>
+
+<!-- Nav Bar -->
+<nav>
+<div class="top-bar">
+<div class="row">
+    <div class="large-9 large-centered columns">
+	    <h1><a href="https://project.ditsi.ru">Dmitry Tsybus | Projects</a></h1>
+    </div>
+</div>
+</div>
+
+<!-- Show menu items and pages -->
+<div class="row">
+<div class="large-9 columns">
+    <ul class="button-group navigation">
+
+    </ul>
+</div>
+</div>
+</nav>
+<!-- End Nav -->
+
+
+<!-- Main Page Content and Sidebar -->
+<div class="row">
+
+    <!-- Main Blog Content -->
+    <div class="large-9 columns">
+<article>
+    <header>
+        <h3 class="article-title"><a href="https://project.ditsi.ru/ustanovka-dlia-zasvetki-fotorezista.html" rel="bookmark"
+        title="Permalink to Установка для засветки фоторезиста">Установка для засветки фоторезиста</a></h3>
+    </header>
+
+<h6 class="subheader" title="2016-03-27T00:00:00+03:00">Sun 27 March 2016
+</h6>
+
+
+    <p><img alt="None" src="https://project.ditsi.ru/images/17/11.jpg"></p>
+<p>Желание автоматизировать всё на свете не даёт мне покоя.</p>
+<p>При производстве плат необходимо засвечивать наклеенный фоторезист ультрафиолетовым (УФ) светом. Наиболее простой способ сделать это - использовать УФ лампу. Минус лампы заключается в том, что свет падает на фоторезист в разных точках под разным углом и чем больше плата, тем больше меняется этот угол от центра к краю платы.</p>
+<p>На практике мне приходилось делать такую плату. Для того, чтобы более-менее равномерно засветить фоторезист, мне пришлось в процессе засветки двигать плату под УФ лампой. Это заметно усложняло процесс и уверенность в том, что плата будет качественно сделана, падала.</p>
+<p><img alt="None" src="https://project.ditsi.ru/images/17/1.jpg"></p>
+<p>После убеждений в "нужности" данной затеи, хочу добавить, что отчасти мне просто не сиделось на месте =)</p>
+<p>Прежде в интернетах я натыкался на решение в виде матрицы из УФ светодиодов. Этим же путём пошёл я, но добавив щепотку AVR. Как известно, всё становится лучше когда есть AVR.</p>
+<p>Для отображения информации я использовал свой же проект <a href="https://project.ditsi.ru/semisegmentnyi-indikator-na-sdvigovykh-registrakh.html">дисплея на сдвиговых регистрах</a>. Нужен был кусок на 3 цифры. Фотодиоды были куплены в Китае, все остальные комплектующие - в Москве.</p>
+<p>Оставлю пару-тройку фотографий процесса изготовления платы светодиодов, всё-таки плат бОльшего размера мне пока не приходилось делать.</p>
+<p><img alt="None" src="https://project.ditsi.ru/images/17/2.jpg"></p>
+<p>Изначально плата задумывалась с двумя контурами светодиодов: если нужно работает вся плата, если нет - только средняя часть. Со временем я понял что сэкономить электричество на этом сложно, да и удобство страдает. Объединил контуры и только светится только вся плата целиком. Если бы раньше дошёл до этого, проектирование было бы значительно проще.</p>
+<p><img alt="None" src="https://project.ditsi.ru/images/17/3.jpg"></p>
+<p>При засветке платы, лампа перемещалась в 4 разных точки для более равномерной засветки (ещё раз подтверждение, что нужно что-то менять).</p>
+<p><img alt="None" src="https://project.ditsi.ru/images/17/4.jpg"></p>
+<p><img alt="None" src="https://project.ditsi.ru/images/17/5.jpg"></p>
+<p>Специально для этого проекта был куплен необходимый по величине тазик.</p>
+<p><img alt="None" src="https://project.ditsi.ru/images/17/6.jpg"></p>
+<p>Результат.</p>
+<p><img alt="None" src="https://project.ditsi.ru/images/17/7.jpg"></p>
+<p>С напаянными светодиодами.</p>
+<p><img alt="None" src="https://project.ditsi.ru/images/17/8.jpg"></p>
+<p>При помощи станка в плате сделано 8 отверстий диаметром 3 мм. Внешние 4 нужны для крепления ножек, внутренние - для крепления управляющей платы.</p>
+<p><img alt="None" src="https://project.ditsi.ru/images/17/9.jpg"></p>
+<p>По большому счёту плата управления не имеет ничего примечательного: 3 кнопки для запуска-остановки и настройки времени засветки, пищалка со встроенным генератором, работающая от постояного напряжения 5V, микроконтроллер ATtiny2313, светодиод для отображения текущего состояния, кренка для питания контроллера и пады (pads) для подключения дисплея (да-да, того самого). </p>
+<p><img alt="None" src="https://project.ditsi.ru/images/17/12.png">
+<em>3D модель платы</em></p>
+<p>Пожалуй, единственное, что заслуживает отдельного внимания в процессе производства управляющей платы это процесс травления. Он проходил с использованием пока что недоделаной "Мешалки" (устройства для перемешивания и нагрева раствора в посудине).</p>
+<iframe width="100%" height="400" src="https://www.youtube.com/embed/mL2Fc_B-DQM" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+
+<p>На следующем фото дисплей уже соединён с платой проводами. Также я спроектировал деталь для крепления дисплея к плате, чтобы он не болтался и напечатал её на 3D принтере. Дисплей встал как родной.</p>
+<p><img alt="None" src="https://project.ditsi.ru/images/17/10.jpg"></p>
+<p>Фото работающей установки. Видно время 3 минуты 10 секунд. По истечении этого времени установка перестанет светить и пропищит beeper'ом, мол, "я закончила".</p>
+<p><img alt="None" src="https://project.ditsi.ru/images/17/11.jpg"></p>
+<p>В результате, когда установка была протестирована, оказалось, что её яркость настолько ярче, чем у лампы, которой я пользовался раньше, что изготовить платы с её помощью невозможно (либо пересвет, либо недосвет). По этому поводу в прошивку платы управления была добавлена опция установки яркости, реализованная при помощи ШИМ'а контроллера. Изменяется скважность импульсов - изменяется яркость. Настройки времени и скважности сохраняются в EEPROM память контроллера.</p>
+<p>На этом в общем-то можно закончить, добавив видео, но дополнительно укажу, что было сделано некорректно.</p>
+<p>Место за кренкой оставлено не случайно.. Но как ни странно, оно предназначалось не под радиатор, а для того, чтобы загнуть эту самую кренку и плата выглядела бы чуть изящнее. Проблема лишь в том, что я совершенно забыл про яркий дисплей, который в общем-то немало потребляет. А в результате кренка не просто нагревается - она греется как утюг. Из-за этого пришлось устанавливать на кренку радиатор, после чего она уже грелась градусов до 80-ти. Так как вода на радиаторе не кипит (да, так и проверял), а рабочая температура кренки может по даташиту доходить до 150 градусов, то было решено оставить всё как есть, хотя если дотронуться до радиатора во время работы, он неприятно обжигает. Правильно, конечно, было бы использовать DC-DC.</p>
+<p>Собственно видео работы ниже.</p>
+<iframe width="100%" height="400" src="https://www.youtube.com/embed/iOJ4QrA3NOk" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+
+<p>Материалы для производства:</p>
+<ul>
+<li><a href="https://project.ditsi.ru/LEDS.7z">плата светодиодов в формате Altium Designer</a></li>
+<li><a href="https://project.ditsi.ru/UC.7z">плата управления в формате Altium Designer</a></li>
+<li><a href="https://project.ditsi.ru/corner.stl">файл пластикового уголка</a></li>
+<li><a href="https://github.com/DiTsi/PCB_UV_tool">прошивка</a></li>
+</ul>
+<p>Успехов!</p>
+<!-- <p class="subheader">Category: <a href="https://project.ditsi.ru/category/misc.html">misc</a> -->
+
+</p>
+
+
+
+
+</article>
+    </div>
+    <!-- End Main Content -->
+
+    <!-- Sidebar -->
+    <aside class="large-3 columns">
+        <!-- 		
+        <h5 class="sidebar-title">Categories</h5>
+        <ul class="side-nav">
+            <li><a href="https://project.ditsi.ru/category/misc.html">misc</a></li>
+   
+        </ul>
+ -->
+
+		
+        <h5 class="sidebar-title">Contact me</h5>
+        <ul class="side-nav">
+            <li><a href="https://t.me/DiTsi">Telegram</a></li>
+            <li><a href="https://github.com/DiTsi">GitHub</a></li>
+        </ul>
+
+<h5 class="sidebar-title">Navigation</h5>
+        <ul class="side-nav">
+            <li><a href="https://project.ditsi.ru/archives.html">List</a>
+            <!-- <li><a href="https://project.ditsi.ru/tags.html">Tags</a> -->
+        </ul>
+    </aside> <!-- End Sidebar -->
+
+</div> <!-- End Main Content and Sidebar -->
+
+
+<!-- Footer -->
+<footer class="row">
+    <div class="large-12 columns">
+        <hr />
+        <div class="row">
+            <div class="large-6 columns">
+              <!--                  <p>Dmitry Tsybus | Projects by Dmitry Tsybus</p> -->
+            </div>
+            </div>
+    </div>
+</footer>
+</body>
+</html>

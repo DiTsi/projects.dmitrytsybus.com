@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<head>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-71G6LJV8B3"></script>
+    <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'G-71G6LJV8B3');
+    </script>
+    <meta charset="utf-8" />
+    <!-- Set the viewport width to device width for mobile -->
+    <meta name="viewport" content="width=device-width" />
+
+    <title>Бинарные пятнашки</title>
+
+    <link rel="stylesheet" href="https://project.ditsi.ru/theme/css/normalize.css" />
+    <link rel="stylesheet" href="https://project.ditsi.ru/theme/css/foundation.min.css" />
+    <link rel="stylesheet" href="https://project.ditsi.ru/theme/css/style.css" />
+    <link rel="stylesheet" href="https://project.ditsi.ru/theme/css/pygments.css" />
+    <link rel="stylesheet" href="https://project.ditsi.ru/theme/css/custom.css" />	
+    <script src="https://project.ditsi.ru/theme/js/modernizr.js"></script>
+</head>
+
+<body>
+
+<!-- Nav Bar -->
+<nav>
+<div class="top-bar">
+<div class="row">
+    <div class="large-9 large-centered columns">
+	    <h1><a href="https://project.ditsi.ru">Dmitry Tsybus | Projects</a></h1>
+    </div>
+</div>
+</div>
+
+<!-- Show menu items and pages -->
+<div class="row">
+<div class="large-9 columns">
+    <ul class="button-group navigation">
+
+    </ul>
+</div>
+</div>
+</nav>
+<!-- End Nav -->
+
+
+<!-- Main Page Content and Sidebar -->
+<div class="row">
+
+    <!-- Main Blog Content -->
+    <div class="large-9 columns">
+<article>
+    <header>
+        <h3 class="article-title"><a href="https://project.ditsi.ru/binarnye-piatnashki.html" rel="bookmark"
+        title="Permalink to Бинарные пятнашки">Бинарные пятнашки</a></h3>
+    </header>
+
+<h6 class="subheader" title="2013-04-01T00:00:00+04:00">Mon 01 April 2013
+</h6>
+
+
+    <p>Всё началось вот с этой игрушки, взятой у друга (такие раздавали на автовыставке, поэтому кому-то она может быть знакомой).</p>
+<p><img alt="None" src="https://project.ditsi.ru/images/29/1.jpg">
+<em>Рисунок 1. Десятичные пятнашки (вариант от Subaru)</em></p>
+<p>Наигравшись в неё и начитавшись статей про <a href="http://habrahabr.ru/post/139647/">бинарные часы</a> на <a href="http://habrahabr.ru/">habrahabr.ru</a>, идея "бинарных пятнашек" как-то сама собой родилась в голове.</p>
+<p>Корпус для игрушки решено было печатать на 3D-принтере. До этого с 3D моделированием, да и печатью дел не имел - очень хотелось попробовать. Модели рисовались в SketchUp. На тот момент ничего лучшего не знал.</p>
+<p>Для написания этой статьи импортировал созданные в SketchUp stl файлы в SolidWorks и там придавал им цвет, поэтому они получились немного страшненькими. Именно по этим моделям и выполнялась печать.</p>
+<p><img alt="None" src="https://project.ditsi.ru/images/29/2.png">
+<em>Рисунок 2. Основная часть корпуса</em></p>
+<div class="highlight"><pre><span></span><code><span class="mf">1</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="n">отверстие</span><span class="w"> </span><span class="n">для</span><span class="w"> </span><span class="s">&quot;выдавливания&quot;</span><span class="w"> </span><span class="n">батарейки</span>
+<span class="mf">2</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="n">защёлки</span>
+<span class="mf">3</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="n">выпуклость</span><span class="w"> </span><span class="n">для</span><span class="w"> </span><span class="n">прижима</span><span class="w"> </span><span class="n">держателя</span><span class="w"> </span><span class="n">батарейки</span>
+<span class="mf">4</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="n">отверстия</span><span class="w"> </span><span class="n">под</span><span class="w"> </span><span class="n">винты</span><span class="w"> </span><span class="p">(</span><span class="mf">2</span><span class="w"> </span><span class="n">шт</span><span class="mf">.</span><span class="p">)</span>
+<span class="mf">5</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="n">отверстие</span><span class="w"> </span><span class="n">под</span><span class="w"> </span><span class="n">батарейку</span><span class="w"> </span><span class="n">CR2032</span>
+<span class="mf">6</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="n">отверстие</span><span class="w"> </span><span class="n">под</span><span class="w"> </span><span class="n">переключатель</span>
+<span class="mf">7</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="n">отверстие</span><span class="w"> </span><span class="n">под</span><span class="w"> </span><span class="n">кнопку</span><span class="w"> </span><span class="s">&quot;памяти&quot;</span><span class="w"> </span><span class="p">(</span><span class="n">при</span><span class="w"> </span><span class="n">нажатии</span><span class="w"> </span><span class="n">расположение</span><span class="w"> </span><span class="n">текущей</span><span class="w"> </span><span class="n">игры</span><span class="w"> </span><span class="n">записывается</span><span class="w"> </span><span class="n">в</span><span class="w"> </span><span class="n">EEPROM</span><span class="p">)</span>
+</code></pre></div>
+
+<p><img alt="None" src="https://project.ditsi.ru/images/29/3.png">
+<em>Рисунок 3. "Выравниватель" диодов</em></p>
+<div class="highlight"><pre><span></span><code><span class="mf">1</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="n">отверстия</span><span class="w"> </span><span class="n">под</span><span class="w"> </span><span class="n">диоды</span><span class="w"> </span><span class="p">(</span><span class="mf">64</span><span class="w"> </span><span class="n">шт</span><span class="mf">.</span><span class="p">)</span>
+<span class="mf">2</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="n">вырез</span><span class="w"> </span><span class="n">для</span><span class="w"> </span><span class="n">кнопки</span>
+</code></pre></div>
+
+<p><img alt="None" src="https://project.ditsi.ru/images/29/4.png">
+<em>Рисунок 4. Задняя крышка и кнопки</em></p>
+<div class="highlight"><pre><span></span><code><span class="mf">1</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="n">защёлки</span>
+<span class="mf">2</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="n">выпуклости</span><span class="w"> </span><span class="n">для</span><span class="w"> </span><span class="n">прилегания</span><span class="w"> </span><span class="n">к</span><span class="w"> </span><span class="n">плате</span>
+<span class="mf">3</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="n">отверстия</span><span class="w"> </span><span class="n">под</span><span class="w"> </span><span class="n">винты</span>
+</code></pre></div>
+
+<p>На рисунках цвета не совсем соответствуют желаемым. Зелёный хотелось чуть поярче, а то, что нарисовано серым было напечатано черным (у черных моделей все грани сливаются). Мне хотелось примерно такого сочетания.</p>
+<p>Что же получилось.</p>
+<p><img alt="None" src="https://project.ditsi.ru/images/29/5.jpg">
+<em>Рисунок 5. Первые испытания</em></p>
+<p><img alt="None" src="https://project.ditsi.ru/images/29/6.jpg">
+<em>Рисунок 6. "Выравниватель" для диодов одет и укорочены ножки для прошивки</em></p>
+<p><img alt="None" src="https://project.ditsi.ru/images/29/7.jpg">
+<em>Рисунок 7. В собранном корпусе</em></p>
+<p><img alt="None" src="https://project.ditsi.ru/images/29/8.jpg">
+<em>Рисунок 8. Кнопок пока что нет.</em></p>
+<p><img alt="None" src="https://project.ditsi.ru/images/29/9.jpg">
+<em>Рисунок 9.</em></p>
+<p>Как вы наверное заметили, из отсека батарейки торчит какой-то непонятный скотч) Дело в том, что отверстие для "выдавливания" батарейки оказалось неработоспособным. По задумке, давя сбоку скрепкой на батарейку, она должна была выдавливаться в перпендикулярном к направлению давления направлении. Но не тут-то было! Силы трения оказались сильнее и эта задумка, к сожалению, накрылась.</p>
+<p>Ничего лучше, чем приклеить к батарейке кусок скотча я на тот момент не придумал. "Нет ничего более постоянного, чем временное", и кусок скотча позволяет вынимать батарейки и по сей день =)</p>
+<p>Зелёный цвет оказался не тем зелёным, на который я расчитывал, но это не принципиально.</p>
+<p>С кнопками отдельная история. Они получились больше нужного размера (при печати размеры немного плавают - это нужно учитывать) и не влезли в отверстия. Еще пара неудач, и было решено отрезать "юбку" у кнопок и приклеить их снаружи вместо того, чтобы вставлять изнутри. Не элегантное решение, однако враз избавило от мучений.</p>
+<p>Это первая двухслойная плата в моей жизни. А как известно, первый блин комом - слои немного смещены относительно друг друга, поэтому и пайка выглядит "так себе".</p>
+<p><img alt="None" src="https://project.ditsi.ru/images/29/10.jpg">
+<em>Рисунок 10. Задняя сторона платы</em></p>
+<p>Как видно на рисунке, "защелки", которые должны были цепляться друг за друга, не были напечатаны 3D-принтером. С чем это связано сказать мне сложно, но видно, что даже попыток их печатать принтер не делал. На модели они есть (рисунок 2).</p>
+<p>Теперь к тому, что УДАЛОСЬ =)</p>
+<iframe width="100%" height="400" src="https://www.youtube.com/embed/LysUOP4YAAQ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+
+<p>Первый запуск. В прошивке отсутствовала возможность случайной расстановки чисел</p>
+<iframe width="100%" height="400" src="https://www.youtube.com/embed/8zXAHzUPWNU" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+
+<p>На видео показано, как работает запись в EEPROM и случайная расстановка чисел.</p>
+<p>64 диода, конечно же не могут индивидуально управляться микросхемой у которой 32 ножки. Поэтому была использована динамическая индикация.</p>
+<p>Принцип по которому управляется игрушка понятен из видео. Двигается кнопками не пустая ячейка, а ячейки с цифрами по направлению к пустой ячейке. Получается, что мы как бы берем и сдвигаем ячейку с цифрой на пустое место, а направление этого движения и задается кнопками, как в настоящих пятнашках пальцем. Мне такой подход показался наиболее удобным. Мысли, что нужно делать иначе, даже не было.</p>
+<p>Прошивка написана в Bascom-AVR. В прошивке не предусмотрено какого-либо визуального эффекта при прохождении игры. Это вполне можно добавить.</p>
+<p>Для расстановки чисел в случайном порядке использовался таймер ATMega8. Если кому-то интересно, как именно, выложу исходники (посмотрел на них только что - ничего не понятно =).</p>
+<p>Было два варианта, как расставлять числа: либо по счету (от 1 до 15), но в случайные ячейки, либо по порядку в ячейки, но случайные числа. Сделал как сделал. Думаю, так интереснее. Во-первых, можно понять как выглядит каждое число, если они идут по порядку от 1 до 15, а во-вторых, интереснее когда числа загораются в случайных ячейках, нежели они бы выводились строго по очереди.</p>
+<p>И наверное самое главное. Как же понять, на какое число мы смотрим?</p>
+<p><img alt="None" src="https://project.ditsi.ru/images/29/11.jpg">
+<em>Рисунок 11. Схема чтения чисел</em></p>
+<p>Думаю, тут всё достаточно понятно. "Читаем" слева-направо сверху-вниз (как мы умеем).</p>
+<p>На этом, кажется, всё.</p>
+<p>Надо сказать, что я так ни разу ещё и не прошел свои технологичные пятнашки. К моменту, когда закончил делать игрушку, интерес к пятнашкам ослаб. К тому же в бинарном варианте, по понятным причинам, пройти игру сложнее)</p>
+<p><a href="https://github.com/DiTsi/binary_15_puzzle">исходники здесь</a></p>
+<!-- <p class="subheader">Category: <a href="https://project.ditsi.ru/category/misc.html">misc</a> -->
+
+</p>
+
+
+
+
+</article>
+    </div>
+    <!-- End Main Content -->
+
+    <!-- Sidebar -->
+    <aside class="large-3 columns">
+        <!-- 		
+        <h5 class="sidebar-title">Categories</h5>
+        <ul class="side-nav">
+            <li><a href="https://project.ditsi.ru/category/misc.html">misc</a></li>
+   
+        </ul>
+ -->
+
+		
+        <h5 class="sidebar-title">Contact me</h5>
+        <ul class="side-nav">
+            <li><a href="https://t.me/DiTsi">Telegram</a></li>
+            <li><a href="https://github.com/DiTsi">GitHub</a></li>
+        </ul>
+
+<h5 class="sidebar-title">Navigation</h5>
+        <ul class="side-nav">
+            <li><a href="https://project.ditsi.ru/archives.html">List</a>
+            <!-- <li><a href="https://project.ditsi.ru/tags.html">Tags</a> -->
+        </ul>
+    </aside> <!-- End Sidebar -->
+
+</div> <!-- End Main Content and Sidebar -->
+
+
+<!-- Footer -->
+<footer class="row">
+    <div class="large-12 columns">
+        <hr />
+        <div class="row">
+            <div class="large-6 columns">
+              <!--                  <p>Dmitry Tsybus | Projects by Dmitry Tsybus</p> -->
+            </div>
+            </div>
+    </div>
+</footer>
+</body>
+</html>

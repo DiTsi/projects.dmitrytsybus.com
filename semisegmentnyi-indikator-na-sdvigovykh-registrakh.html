@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<head>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-71G6LJV8B3"></script>
+    <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'G-71G6LJV8B3');
+    </script>
+    <meta charset="utf-8" />
+    <!-- Set the viewport width to device width for mobile -->
+    <meta name="viewport" content="width=device-width" />
+
+    <title>Семисегментный индикатор на сдвиговых регистрах</title>
+
+    <link rel="stylesheet" href="https://project.ditsi.ru/theme/css/normalize.css" />
+    <link rel="stylesheet" href="https://project.ditsi.ru/theme/css/foundation.min.css" />
+    <link rel="stylesheet" href="https://project.ditsi.ru/theme/css/style.css" />
+    <link rel="stylesheet" href="https://project.ditsi.ru/theme/css/pygments.css" />
+    <link rel="stylesheet" href="https://project.ditsi.ru/theme/css/custom.css" />	
+    <script src="https://project.ditsi.ru/theme/js/modernizr.js"></script>
+</head>
+
+<body>
+
+<!-- Nav Bar -->
+<nav>
+<div class="top-bar">
+<div class="row">
+    <div class="large-9 large-centered columns">
+	    <h1><a href="https://project.ditsi.ru">Dmitry Tsybus | Projects</a></h1>
+    </div>
+</div>
+</div>
+
+<!-- Show menu items and pages -->
+<div class="row">
+<div class="large-9 columns">
+    <ul class="button-group navigation">
+
+    </ul>
+</div>
+</div>
+</nav>
+<!-- End Nav -->
+
+
+<!-- Main Page Content and Sidebar -->
+<div class="row">
+
+    <!-- Main Blog Content -->
+    <div class="large-9 columns">
+<article>
+    <header>
+        <h3 class="article-title"><a href="https://project.ditsi.ru/semisegmentnyi-indikator-na-sdvigovykh-registrakh.html" rel="bookmark"
+        title="Permalink to Семисегментный индикатор на сдвиговых регистрах">Семисегментный индикатор на сдвиговых регистрах</a></h3>
+    </header>
+
+<h6 class="subheader" title="2015-09-25T00:00:00+03:00">Fri 25 September 2015
+</h6>
+
+
+    <p><img alt="None" src="https://project.ditsi.ru/images/20/4.png"></p>
+<p>До какого-то момента мне приходилось делать дисплеи на семисегментных индикаторах каждый раз с нуля. Один раз реализация была посредством динамической индикации, другой с помощью сдвиговых регистров, третий - еще как попало. Код для каждого изделия был индивидуален, ведь я подключал ноги дисплея как удобно. Конечно, у такого подхода есть плюсы, но каждый раз править код как-то поднадоело и было решено сделать универсальный дисплей, который можно было бы брать и использовать в отдельных проектах.</p>
+<p>Решил делать дисплей на очень ярких семисегментниках BL-S56A-11UR с возможностью подключать до 10-ти разрядов. В качестве сдвиговых регистров использовались классические 74HC595D. Хорошего в них цена + возможность передачи битов данных на следующий сдвиговый регистр. То есть отобрав у микроконтроллера всего 3 ноги, мы сможем отобразить на дисплее 10-тизначное число.</p>
+<p>В общем-то на этом можно было закончить рассказ, разбавив его исходниками, но есть пара положительных особенностей реализации и мелких косячков, о которых хочу упомянуть.</p>
+<p>При проектировании в учёт было взято то, что плата может быть распилена на части (мало кому реально нужны 10 разрядов), и эти части должны остаться в рабочем состоянии. Для этого сделаны, помимо основных ламелей для подключения дисплея, дополнительные, которые после отпиливания левой части платы, станут основными. Пикча для понимания:</p>
+<p><img alt="None" src="https://project.ditsi.ru/images/20/1.png"></p>
+<p>Также в учёт было взято то, что после отрезания платы, нужно будет как-то крепить её. Слева на картинке видно отверстия под винты M3. Аналогичные есть и с другой стороны. Но что, если у вас используется только кусок платы, а не вся целиком.. Для этого была предусмотрена возможность рассверлить отверстия под винты прямо в бывших pad'ах ног семисегментника, чтобы они располагались симетрично "заводским" отверстиям.</p>
+<p><img alt="None" src="https://project.ditsi.ru/images/20/2.png"></p>
+<p>Расстояния A и B на картинке одинаковы и крепёжные отверстия выравнены по вертикали с pad'ами дисплеев. Значит отпилив плату как показано на картинке и рассверлив левое отверстие, относящееся к "B", мы сможем затем за него крепить дисплей. Понятно, что на это уйдёт один разряд.</p>
+<p>При сборке выяснилось, что отверстия под ноги индикаторов маловаты (проходят в притирку), а также что расстояния между 5-ю ногами, выстроенными в ряд, неправильное О_о Посмотрел даташит - 100 mil, посмотрел свой проект - 100 mil, даже померил штангенциркулем - 100 mil! А ноги входят "врастопырку". Это мой камень в огород BetLux Electronix. Хотя, конечно, если б я сделал отверстия не в притирку, думаю, ноги вошли бы не выгибаясь (BetLux Electronix кидает камень в ответ). Но это не сильно беспокоит.</p>
+<p>Вот, пожалуй, и всё. Ниже будет пара картинок, фоток и ссылка на проект. Также чуть позже постараюсь выложить тут видео готового устройства, где этот дисплей активно используется.</p>
+<p>Печатная плата:</p>
+<p><img alt="None" src="https://project.ditsi.ru/images/20/3.jpg"></p>
+<p>Токоограничивающие резисторы установлены прямо под индикаторами (там для этого куча места):</p>
+<p><img alt="None" src="https://project.ditsi.ru/images/20/4.png"></p>
+<p>Отрезанная и распаянная плата:</p>
+<p><img alt="None" src="https://project.ditsi.ru/images/20/5.jpg"></p>
+<p><img alt="None" src="https://project.ditsi.ru/images/20/6.jpg"></p>
+<h1>Материалы</h1>
+<ul>
+<li><a href="https://project.ditsi.ru/SHIFT_REGISTERS.7z">проект Altium Designer</a></li>
+</ul>
+<!-- <p class="subheader">Category: <a href="https://project.ditsi.ru/category/misc.html">misc</a> -->
+
+</p>
+
+
+
+
+</article>
+    </div>
+    <!-- End Main Content -->
+
+    <!-- Sidebar -->
+    <aside class="large-3 columns">
+        <!-- 		
+        <h5 class="sidebar-title">Categories</h5>
+        <ul class="side-nav">
+            <li><a href="https://project.ditsi.ru/category/misc.html">misc</a></li>
+   
+        </ul>
+ -->
+
+		
+        <h5 class="sidebar-title">Contact me</h5>
+        <ul class="side-nav">
+            <li><a href="https://t.me/DiTsi">Telegram</a></li>
+            <li><a href="https://github.com/DiTsi">GitHub</a></li>
+        </ul>
+
+<h5 class="sidebar-title">Navigation</h5>
+        <ul class="side-nav">
+            <li><a href="https://project.ditsi.ru/archives.html">List</a>
+            <!-- <li><a href="https://project.ditsi.ru/tags.html">Tags</a> -->
+        </ul>
+    </aside> <!-- End Sidebar -->
+
+</div> <!-- End Main Content and Sidebar -->
+
+
+<!-- Footer -->
+<footer class="row">
+    <div class="large-12 columns">
+        <hr />
+        <div class="row">
+            <div class="large-6 columns">
+              <!--                  <p>Dmitry Tsybus | Projects by Dmitry Tsybus</p> -->
+            </div>
+            </div>
+    </div>
+</footer>
+</body>
+</html>

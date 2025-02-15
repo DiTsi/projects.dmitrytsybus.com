@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<head>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-71G6LJV8B3"></script>
+    <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'G-71G6LJV8B3');
+    </script>
+    <meta charset="utf-8" />
+    <!-- Set the viewport width to device width for mobile -->
+    <meta name="viewport" content="width=device-width" />
+
+    <title>Уведомления при изменении цены акций в Тинькофф Инвестициях</title>
+
+    <link rel="stylesheet" href="https://project.ditsi.ru/theme/css/normalize.css" />
+    <link rel="stylesheet" href="https://project.ditsi.ru/theme/css/foundation.min.css" />
+    <link rel="stylesheet" href="https://project.ditsi.ru/theme/css/style.css" />
+    <link rel="stylesheet" href="https://project.ditsi.ru/theme/css/pygments.css" />
+    <link rel="stylesheet" href="https://project.ditsi.ru/theme/css/custom.css" />	
+    <script src="https://project.ditsi.ru/theme/js/modernizr.js"></script>
+</head>
+
+<body>
+
+<!-- Nav Bar -->
+<nav>
+<div class="top-bar">
+<div class="row">
+    <div class="large-9 large-centered columns">
+	    <h1><a href="https://project.ditsi.ru">Dmitry Tsybus | Projects</a></h1>
+    </div>
+</div>
+</div>
+
+<!-- Show menu items and pages -->
+<div class="row">
+<div class="large-9 columns">
+    <ul class="button-group navigation">
+
+    </ul>
+</div>
+</div>
+</nav>
+<!-- End Nav -->
+
+
+<!-- Main Page Content and Sidebar -->
+<div class="row">
+
+    <!-- Main Blog Content -->
+    <div class="large-9 columns">
+<article>
+    <header>
+        <h3 class="article-title"><a href="https://project.ditsi.ru/uvedomleniia-pri-izmenenii-tseny-aktsii-v-tinkoff-investitsiiakh.html" rel="bookmark"
+        title="Permalink to Уведомления при изменении цены акций в Тинькофф Инвестициях">Уведомления при изменении цены акций в Тинькофф Инвестициях</a></h3>
+    </header>
+
+<h6 class="subheader" title="2021-09-11T00:00:00+03:00">Sat 11 September 2021
+</h6>
+
+
+    <p><img alt="None" src="https://project.ditsi.ru/images/36/1.png"></p>
+<p>Соответствующая статья опубликована здесь: <a href="https://habr.com/ru/articles/577416/">https://habr.com/ru/articles/577416</a></p>
+<h1>История</h1>
+<p>В момент всеобщего интереса к теме инвестиций, этим начал заниматься и я. А так как я автоматизирую всё, что попадается мне под руки, эту тему также не обошёл стороной.</p>
+<p>Для инвестиций выбрал Тинькофф, как один из наиболее популярных и функциональных сервисов. Очень быстро появилась потребность отслеживать цену акций, чтобы держать руку на пульсе. В Тинькофф Инвестициях есть инструмент для этого: уведомления по достижении некоего уровня цены. Но это уведомление срабатывает один раз и его приходится ставить заново, что неудобно. Подходящий для меня функционал обнаружил в приложении <a href="https://play.google.com/store/apps/details?id=com.fusionmedia.investing">Investing.com</a>: уведомление придёт, если цена акции изменится на заданную в процентах величину. После уведомления счётчик сбрасывается и уведомление придёт снова, если это повторится. Установил приложение и добавил для отслеживания свои акции - то что нужно!</p>
+<p>Но со временем, когда я продал несколько акций и купил другие, стало понятно, что вносить те же изменения в приложении <a href="http://investing.com/">Investing.com</a> мне лень + раздражало лишнее приложение на телефоне. Благо, у Tinkoff Investing есть <a href="https://tinkoffcreditsystems.github.io/invest-openapi/">API</a>. Решил реализовать тот же функционал с уведомлениями, но непосредственно для моих акций, а уведомления получать в Telegram. Так родился проект https://github.com/DiTsi/tinkoff_investing_notifier.</p>
+<h1>Конфигурация</h1>
+<h2>Telegram</h2>
+<p>Необходимо создать бота в Telegram (<a href="https://habr.com/ru/post/262247/">инструкция</a>) и получить его Токен и ID группы или пользователя, которому бот должен посылать уведомления.</p>
+<h2>Tinkoff Investing Токен</h2>
+<p><em>ВНИМАНИЕ! Токен даёт доступ к вашему портфелю. Обеспечьте его безопасное хранение.</em></p>
+<p>Для работы приложения необходимо получить токен для Тинькофф Инвестиций <a href="https://www.tinkoff.ru/invest/settings/">здесь</a>.</p>
+<h2>.env file</h2>
+<p>Рядом с docker-compose.yml файлом создаём файл .env с переменными окружения, где прописываем все поля:</p>
+<div class="highlight"><pre><span></span><code><span class="nv">TIMEZONE</span><span class="o">=</span>Europe/Moscow
+<span class="nv">TOKEN</span><span class="o">=</span><span class="w"> </span><span class="c1"># Токен для Tinkoff Investing API</span>
+<span class="nv">TELEGRAM_GROUP</span><span class="o">=</span><span class="w"> </span><span class="c1"># ID группы или пользователя Telegram, </span>
+<span class="w">                </span><span class="c1"># куда бот будет отправлять сообщения</span>
+<span class="nv">TELEGRAM_TOKEN</span><span class="o">=</span><span class="w"> </span><span class="c1"># bot token</span>
+
+<span class="nv">MARIADB_HOST</span><span class="o">=</span>
+<span class="nv">MARIADB_PORT</span><span class="o">=</span><span class="m">3306</span>
+<span class="nv">MARIADB_DB</span><span class="o">=</span>
+<span class="nv">MARIADB_USER</span><span class="o">=</span>
+<span class="nv">MARIADB_PASSWORD</span><span class="o">=</span>
+</code></pre></div>
+
+<h2>docker-compose.yml</h2>
+<p>В docker-compose.yml необходимо поправить environment.</p>
+<h2>config.yml</h2>
+<div class="highlight"><pre><span></span><code><span class="nt">notifications</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">stock_change</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">percent</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">2.0</span><span class="w"> </span><span class="c1"># на какую величину должна измениться цена на акцию</span>
+<span class="w">                 </span><span class="c1"># для получения уведомления</span>
+</code></pre></div>
+
+<p>На этом конфигурация завершена, можно запускать через</p>
+<div class="highlight"><pre><span></span><code>docker-compose<span class="w"> </span>up<span class="w"> </span>-d
+</code></pre></div>
+
+<h1>Скриншоты</h1>
+<p>Так выглядят уведомления. При нажатии на название акции вас перебросит в портфель на соответствующую акцию.</p>
+<p><img alt="None" src="https://project.ditsi.ru/images/36/2.jpg"></p>
+<p>Также поддерживаются уведомления о покупке / продаже акций:</p>
+<p><img alt="None" src="https://project.ditsi.ru/images/36/3.jpg"></p>
+<h1>Заключение</h1>
+<p>В коде есть что поправить, есть функционал, который хотелось бы нарастить, но, к сожалению, нет времени + интерес сместился в другую плоскость. Чувствую, что нескоро вернусь к проекту, чтобы исправить его недостатки, поэтому публикую как есть - надеюсь, не только мне будет полезен функционал. У меня уже несколько месяцев проложение работает и помогает мне следить за курсом.</p>
+<!-- <p class="subheader">Category: <a href="https://project.ditsi.ru/category/misc.html">misc</a> -->
+
+</p>
+
+
+
+
+</article>
+    </div>
+    <!-- End Main Content -->
+
+    <!-- Sidebar -->
+    <aside class="large-3 columns">
+        <!-- 		
+        <h5 class="sidebar-title">Categories</h5>
+        <ul class="side-nav">
+            <li><a href="https://project.ditsi.ru/category/misc.html">misc</a></li>
+   
+        </ul>
+ -->
+
+		
+        <h5 class="sidebar-title">Contact me</h5>
+        <ul class="side-nav">
+            <li><a href="https://t.me/DiTsi">Telegram</a></li>
+            <li><a href="https://github.com/DiTsi">GitHub</a></li>
+        </ul>
+
+<h5 class="sidebar-title">Navigation</h5>
+        <ul class="side-nav">
+            <li><a href="https://project.ditsi.ru/archives.html">List</a>
+            <!-- <li><a href="https://project.ditsi.ru/tags.html">Tags</a> -->
+        </ul>
+    </aside> <!-- End Sidebar -->
+
+</div> <!-- End Main Content and Sidebar -->
+
+
+<!-- Footer -->
+<footer class="row">
+    <div class="large-12 columns">
+        <hr />
+        <div class="row">
+            <div class="large-6 columns">
+              <!--                  <p>Dmitry Tsybus | Projects by Dmitry Tsybus</p> -->
+            </div>
+            </div>
+    </div>
+</footer>
+</body>
+</html>
