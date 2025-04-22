@@ -15,12 +15,12 @@
 
     <title>Интеграция шлагбаума с Telegram</title>
 
-    <link rel="stylesheet" href="https://project.ditsi.ru/theme/css/normalize.css" />
-    <link rel="stylesheet" href="https://project.ditsi.ru/theme/css/foundation.min.css" />
-    <link rel="stylesheet" href="https://project.ditsi.ru/theme/css/style.css" />
-    <link rel="stylesheet" href="https://project.ditsi.ru/theme/css/pygments.css" />
-    <link rel="stylesheet" href="https://project.ditsi.ru/theme/css/custom.css" />	
-    <script src="https://project.ditsi.ru/theme/js/modernizr.js"></script>
+    <link rel="stylesheet" href="https://projects.dmitrytsybus.com/theme/css/normalize.css" />
+    <link rel="stylesheet" href="https://projects.dmitrytsybus.com/theme/css/foundation.min.css" />
+    <link rel="stylesheet" href="https://projects.dmitrytsybus.com/theme/css/style.css" />
+    <link rel="stylesheet" href="https://projects.dmitrytsybus.com/theme/css/pygments.css" />
+    <link rel="stylesheet" href="https://projects.dmitrytsybus.com/theme/css/custom.css" />	
+    <script src="https://projects.dmitrytsybus.com/theme/js/modernizr.js"></script>
 </head>
 
 <body>
@@ -30,7 +30,7 @@
 <div class="top-bar">
 <div class="row">
     <div class="large-9 large-centered columns">
-	    <h1><a href="https://project.ditsi.ru">Dmitry Tsybus | Projects</a></h1>
+	    <h1><a href="https://projects.dmitrytsybus.com">Dmitry Tsybus | Projects</a></h1>
     </div>
 </div>
 </div>
@@ -54,7 +54,7 @@
     <div class="large-9 columns">
 <article>
     <header>
-        <h3 class="article-title"><a href="https://project.ditsi.ru/integratsiia-shlagbauma-s-telegram.html" rel="bookmark"
+        <h3 class="article-title"><a href="https://projects.dmitrytsybus.com/integratsiia-shlagbauma-s-telegram.html" rel="bookmark"
         title="Permalink to Интеграция шлагбаума с Telegram">Интеграция шлагбаума с Telegram</a></h3>
     </header>
 
@@ -62,17 +62,17 @@
 </h6>
 
 
-    <p><img alt="None" src="https://project.ditsi.ru/images/35/3.jpg"></p>
+    <p><img alt="None" src="https://projects.dmitrytsybus.com/images/35/3.jpg"></p>
 <p>Идея добавить возможность управления шлагбаумом во дворе через Telegram возникла по нескольким причинам. Первая - я должен был достаточно далеко уехать от дома, но иметь возможность запускать строителей (у меня в квартире в этот момент происходил ремонт). Вторая - хотелось понимать, кто именно и в какой момент открывает шлагбаум, потому что на парковке стали появляться нежданные гости. Для реализации второй идеи нужно было бы ещё отобрать у людей возможность пользоваться пультами и это была крайняя мера. К счастью, мы уладили проблемы с лишним транспортом без этого.</p>
 <p>Какого результата хотелось достичь. В Telegram создаётся группа, куда добавляются все, кто должен иметь контроль над шлагбаумом. В эту же группу добавляется бот. При обращении к нему в этой группе (через <strong>@</strong>), бот открывает / закрывает шлагбаум. Всё просто. Выглядит на практике это так:</p>
-<p><img alt="None" src="https://project.ditsi.ru/images/35/2.png"></p>
+<p><img alt="None" src="https://projects.dmitrytsybus.com/images/35/2.png"></p>
 <p>Основой для решения стала плата <strong>Orange Pi Zero 2 1Gb AllWinner H616</strong>. Соединяется она с электроникой шлагбаума через реле + необходимая обвязка из других компонентов.</p>
 <p>Для платы написан код на Python для работы самого бота (код доступен <a href="https://github.com/DiTsi/gatebot">здесь</a>). Плата подключается по WiFi к точке одного из соседей. Можно запомнить несколько точек на случай, если одна отвалится.</p>
 <p>Также на плате есть OpenVPN клиент. Он постоянно коннектится к определённому адресу в интернете и когда мне будет нужно иметь доступ к плате, я разверну по этому адресу сервер OpenVPN и через него зайду на плату.</p>
 <p>Снаружи у шлагбаума появилась дополнительная WiFi антенна, которую можно увидеть на фото.</p>
-<p><img alt="None" src="https://project.ditsi.ru/images/35/1.jpg"></p>
+<p><img alt="None" src="https://projects.dmitrytsybus.com/images/35/1.jpg"></p>
 <p>Работает решение стабильно уже почти год. </p>
-<!-- <p class="subheader">Category: <a href="https://project.ditsi.ru/category/misc.html">misc</a> -->
+<!-- <p class="subheader">Category: <a href="https://projects.dmitrytsybus.com/category/misc.html">misc</a> -->
 
 </p>
 
@@ -88,7 +88,7 @@
         <!-- 		
         <h5 class="sidebar-title">Categories</h5>
         <ul class="side-nav">
-            <li><a href="https://project.ditsi.ru/category/misc.html">misc</a></li>
+            <li><a href="https://projects.dmitrytsybus.com/category/misc.html">misc</a></li>
    
         </ul>
  -->
@@ -102,8 +102,8 @@
 
 <h5 class="sidebar-title">Navigation</h5>
         <ul class="side-nav">
-            <li><a href="https://project.ditsi.ru/archives.html">List</a>
-            <!-- <li><a href="https://project.ditsi.ru/tags.html">Tags</a> -->
+            <li><a href="https://projects.dmitrytsybus.com/archives.html">List</a>
+            <!-- <li><a href="https://projects.dmitrytsybus.com/tags.html">Tags</a> -->
         </ul>
     </aside> <!-- End Sidebar -->
 

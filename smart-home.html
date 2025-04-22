@@ -15,12 +15,12 @@
 
     <title>Smart Home</title>
 
-    <link rel="stylesheet" href="https://project.ditsi.ru/theme/css/normalize.css" />
-    <link rel="stylesheet" href="https://project.ditsi.ru/theme/css/foundation.min.css" />
-    <link rel="stylesheet" href="https://project.ditsi.ru/theme/css/style.css" />
-    <link rel="stylesheet" href="https://project.ditsi.ru/theme/css/pygments.css" />
-    <link rel="stylesheet" href="https://project.ditsi.ru/theme/css/custom.css" />	
-    <script src="https://project.ditsi.ru/theme/js/modernizr.js"></script>
+    <link rel="stylesheet" href="https://projects.dmitrytsybus.com/theme/css/normalize.css" />
+    <link rel="stylesheet" href="https://projects.dmitrytsybus.com/theme/css/foundation.min.css" />
+    <link rel="stylesheet" href="https://projects.dmitrytsybus.com/theme/css/style.css" />
+    <link rel="stylesheet" href="https://projects.dmitrytsybus.com/theme/css/pygments.css" />
+    <link rel="stylesheet" href="https://projects.dmitrytsybus.com/theme/css/custom.css" />	
+    <script src="https://projects.dmitrytsybus.com/theme/js/modernizr.js"></script>
 </head>
 
 <body>
@@ -30,7 +30,7 @@
 <div class="top-bar">
 <div class="row">
     <div class="large-9 large-centered columns">
-	    <h1><a href="https://project.ditsi.ru">Dmitry Tsybus | Projects</a></h1>
+	    <h1><a href="https://projects.dmitrytsybus.com">Dmitry Tsybus | Projects</a></h1>
     </div>
 </div>
 </div>
@@ -54,7 +54,7 @@
     <div class="large-9 columns">
 <article>
     <header>
-        <h3 class="article-title"><a href="https://project.ditsi.ru/smart-home.html" rel="bookmark"
+        <h3 class="article-title"><a href="https://projects.dmitrytsybus.com/smart-home.html" rel="bookmark"
         title="Permalink to Smart Home">Smart Home</a></h3>
     </header>
 
@@ -65,16 +65,16 @@
     <p>Проект умного дома начинался 5 лет назад и сейчас, кажется, что он созрел достаточно, чтобы о нём можно было написать.</p>
 <p>Цели на тот момент были туманными, но было однозначно ясно, что на этапе строительства необходимо предусмотреть расположение всего, что сдвинуть с места уже не получится: провода питания, котёл, трубы отопления с возможностью вРАЗУМить это всё в будущем.</p>
 <p>Исходя из этого трубы отопления разводились с использованием коллекторов - для индивидуального отопления каждой комнаты.</p>
-<p><img alt="None" src="https://project.ditsi.ru/images/11/1.jpeg"></p>
+<p><img alt="None" src="https://projects.dmitrytsybus.com/images/11/1.jpeg"></p>
 <p>Свет было принято делать не по классической схеме с прокладыванием высоковольтного провода через выключатели, а вести из единой точки управления индивидуальные провода в каждую комнату, чтобы в будущем управлять через контроллеры. Какие - на тот момент я даже не думал.</p>
 <p>Все коммуникации должны были сходиться в одном месте - у сервера.</p>
 <p>Смешно вспоминать, но на тот момент я даже обдумывал вариант разработки собственной реализации приложения умного дома. Это, конечно, утопия. Хорошо, что с того момента я порядком прокачался в IT, чтобы счесть эту идею нереальной.</p>
 <p>Подробно описывать всё что было сделано не имеет смысла и займёт очень много времени-пространства в этом посте. Перейду к тому, что получилось на текущий момент.</p>
 <h1>Освещение</h1>
 <p>В качестве протокола для освещения был выбран DMX512: старый, надёжный, неприхотливый. Всякую современную "умную" беспроводную дребедень я не рассматривал.</p>
-<p><img alt="None" src="https://project.ditsi.ru/images/11/2.jpeg"></p>
+<p><img alt="None" src="https://projects.dmitrytsybus.com/images/11/2.jpeg"></p>
 <p>До сервера тянется один провод через DMX512 -&gt; USB адаптер.</p>
-<p><img alt="None" src="https://project.ditsi.ru/images/11/3.jpeg"></p>
+<p><img alt="None" src="https://projects.dmitrytsybus.com/images/11/3.jpeg"></p>
 <p>Контроллеры умеют менять яркость, включать и выключать. Они умеют ещё больше, но не буду погружаться в технические подробности.</p>
 <p>Включать-выключать свет будет не нужно, это будет делать автоматика при входе-выходе в дом и из комнаты в комнату. Это отдельный проект (как сказали бы в СССР, "программно-аппаратный комплекс"), который будет легко интегрирован в Home Assistant. В HomeKit и Google Home тоже, когда придёт время ;-) Тут я бы мог растечься по древу совсем жидко, но держу себя в рамках приличия.</p>
 <h1>Отопление</h1>
@@ -86,15 +86,15 @@
 <h1>Что получилось</h1>
 <p>На данный момент приложение выглядит так.</p>
 <p>Это вкладка с управлением освещением</p>
-<p><img alt="None" src="https://project.ditsi.ru/images/11/4.jpeg"></p>
+<p><img alt="None" src="https://projects.dmitrytsybus.com/images/11/4.jpeg"></p>
 <p>дто данные по геолокации членов семьи, которые используются для автоматизации</p>
-<p><img alt="None" src="https://project.ditsi.ru/images/11/5.jpeg"></p>
+<p><img alt="None" src="https://projects.dmitrytsybus.com/images/11/5.jpeg"></p>
 <p>контроль за безопасностью (WiFi отнёс сюда же)</p>
-<p><img alt="None" src="https://project.ditsi.ru/images/11/6.jpeg"></p>
+<p><img alt="None" src="https://projects.dmitrytsybus.com/images/11/6.jpeg"></p>
 <p>управление климатом</p>
-<p><img alt="None" src="https://project.ditsi.ru/images/11/7.jpeg"></p>
+<p><img alt="None" src="https://projects.dmitrytsybus.com/images/11/7.jpeg"></p>
 <p>и минимальное количество настроек</p>
-<p><img alt="None" src="https://project.ditsi.ru/images/11/8.jpeg"></p>
+<p><img alt="None" src="https://projects.dmitrytsybus.com/images/11/8.jpeg"></p>
 <p>Всё остальное я выбросил в лучших традициях Apple. Кроме кнопок управления светом есть только одна - это "подготовка дома". Когда мы уезжаем из дома на некоторое время, он переходит в режим поддержания тепла (standby), в котором он греется не так сильно. А чтобы прогреть его заранее перед возвращением и нужна кнопка "подготовка дома".</p>
 <p>Что касается автоматизации - я сделал всё, на что сейчас хватает датчиков, умных устройств и фантазии. Дом умеет:</p>
 <ul>
@@ -124,7 +124,7 @@
 <h1>Завершение</h1>
 <p>Есть ещё много всего, что хотелось бы реализовать, и этот пост будет дополняться по мере развития Умного дома, но то, что получилось сейчас мне уже нравится =)</p>
 <p>Далі буде...</p>
-<!-- <p class="subheader">Category: <a href="https://project.ditsi.ru/category/misc.html">misc</a> -->
+<!-- <p class="subheader">Category: <a href="https://projects.dmitrytsybus.com/category/misc.html">misc</a> -->
 
 </p>
 
@@ -140,7 +140,7 @@
         <!-- 		
         <h5 class="sidebar-title">Categories</h5>
         <ul class="side-nav">
-            <li><a href="https://project.ditsi.ru/category/misc.html">misc</a></li>
+            <li><a href="https://projects.dmitrytsybus.com/category/misc.html">misc</a></li>
    
         </ul>
  -->
@@ -154,8 +154,8 @@
 
 <h5 class="sidebar-title">Navigation</h5>
         <ul class="side-nav">
-            <li><a href="https://project.ditsi.ru/archives.html">List</a>
-            <!-- <li><a href="https://project.ditsi.ru/tags.html">Tags</a> -->
+            <li><a href="https://projects.dmitrytsybus.com/archives.html">List</a>
+            <!-- <li><a href="https://projects.dmitrytsybus.com/tags.html">Tags</a> -->
         </ul>
     </aside> <!-- End Sidebar -->
 
